@@ -1,0 +1,96 @@
+/* MOBILE FIRST! */
+/* All dessa inställningar gäller för mobile! */
+
+/* Centrera bilden i mobile mode */
+.img-container {
+  text-align: center;
+}
+
+.container,
+.img-container {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 850px;
+}
+
+.img-container p {
+  text-align: center;
+}
+
+h1 {
+  color: #cc4425;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  color: #ddd;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  color: #3e4147;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* Media queries - MÅSTE ligga längst ner! */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  /* Jag vill att bilden och texten ska nu ligger bredvid varann! */
+  .img-container {
+    /* 
+      Denna egenskap används för att bestämma hur elementet ska visas. 
+      I det här fallet säger vi att "img-container" ska visas som en tabell. 
+    */
+    display: table;
+    /* 
+      Detta sätter bredden på "img-container" till 100% av dess förälders bredd. 
+      Med andra ord kommer den att ta upp hela bredden på det element som omsluter det. 
+    */
+    width: 100%;
+  }
+
+  .img-container img,
+  .img-container p {
+    /* Här säger vi att både bilder och text ska visas som tabellceller. 
+       Detta innebär att de kommer att bete sig som celler i en tabell. 
+    */
+    display: table-cell;
+    /* 
+      Används för att justera vertikalt innehållet i en cell. 
+      Genom att sätta den till "middle" säger vi att innehållet 
+      ska vara centrerat vertikalt i sina respektive celler. 
+    */
+    vertical-align: middle;
+  }
+
+  .img-container p {
+    text-align: left;
+  }
+}
